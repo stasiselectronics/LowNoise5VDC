@@ -21,7 +21,7 @@ AR Path="/604F9C77/605057F1" Ref="PS?"  Part="1"
 AR Path="/605057F1" Ref="PS1"  Part="1" 
 F 0 "PS1" H 7450 1925 50  0000 C CNN
 F 1 "HLK-PM01" H 7450 1834 50  0000 C CNN
-F 2 "Converter_ACDC:Converter_ACDC_HiLink_HLK-PMxx" H 7450 1300 50  0001 C CNN
+F 2 "LowNoise5V:Converter_ACDC_HiLink_HLK-PMxx" H 7450 1300 50  0001 C CNN
 F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 7850 1250 50  0001 C CNN
 F 4 "" H 7450 1600 50  0001 C CNN "MF 1"
 F 5 "" H 7450 1600 50  0001 C CNN "MF 1 MPN"
@@ -63,7 +63,7 @@ Wire Wire Line
 Wire Wire Line
 	8000 1700 8000 1800
 Text GLabel 1500 1000 0    50   Input ~ 0
-AC_Line_Out
+AC_Line
 Text GLabel 1500 2200 0    50   Input ~ 0
 AC_Neutral
 Wire Wire Line
@@ -78,7 +78,7 @@ U 1 1 60505B03
 P 10500 1550
 F 0 "J1" H 10270 1539 50  0000 R CNN
 F 1 "USB_A" H 10270 1448 50  0000 R CNN
-F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 10650 1500 50  0001 C CNN
+F 2 "LowNoise5V:USB_A_Molex_67643_Horizontal" H 10650 1500 50  0001 C CNN
 F 3 " ~" H 10650 1500 50  0001 C CNN
 F 4 "Molex" H 10500 1550 50  0001 C CNN "Part 1 MF"
 F 5 "676432911" H 10500 1550 50  0001 C CNN "Part 1 MPN"
@@ -228,11 +228,11 @@ Wire Wire Line
 	4500 1750 4500 2200
 Connection ~ 4500 2200
 Wire Wire Line
-	2350 1000 1500 1000
+	2350 1000 1850 1000
 Wire Wire Line
 	2650 1000 3200 1000
 Wire Wire Line
-	1500 2200 3200 2200
+	1500 2200 1850 2200
 Wire Wire Line
 	3200 1450 3200 1000
 Connection ~ 3200 1000
@@ -249,7 +249,7 @@ U 1 1 6053B85B
 P 2500 1300
 F 0 "Acc1" H 2641 1421 50  0000 L CNN
 F 1 "Fuse Holder" H 2641 1330 50  0000 L CNN
-F 2 "" H 2512 1300 50  0001 C CNN
+F 2 "LowNoise5V:FuseHolder" H 2512 1300 50  0001 C CNN
 F 3 "~" H 2512 1300 50  0001 C CNN
 F 4 "HONGJU" H 2500 1300 50  0001 C CNN "Part 1 MF"
 F 5 "FH1-200CK-G" H 2500 1300 50  0001 C CNN "Part 1 MPN"
@@ -353,4 +353,29 @@ F 6 "C106368" H 5500 4650 50  0001 C CNN "Part 1 OC"
 	1    5500 4650
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x02 J2
+U 1 1 6058E947
+P 1300 1550
+F 0 "J2" H 1218 1767 50  0000 C CNN
+F 1 "Conn_01x02" H 1218 1676 50  0000 C CNN
+F 2 "TerminalBlock:TerminalBlock_bornier-2_P5.08mm" H 1300 1550 50  0001 C CNN
+F 3 "~" H 1300 1550 50  0001 C CNN
+	1    1300 1550
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	1500 1550 1850 1550
+Wire Wire Line
+	1850 1550 1850 1000
+Connection ~ 1850 1000
+Wire Wire Line
+	1850 1000 1500 1000
+Wire Wire Line
+	1500 1650 1850 1650
+Wire Wire Line
+	1850 1650 1850 2200
+Connection ~ 1850 2200
+Wire Wire Line
+	1850 2200 3200 2200
 $EndSCHEMATC
