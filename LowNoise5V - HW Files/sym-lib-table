@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name LowNoise5V)(type Legacy)(uri ${KIPRJMOD}/Libraries/Symbols/LowNoise5V.lib)(options "")(descr ""))
+)

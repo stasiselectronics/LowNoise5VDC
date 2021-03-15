@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name LowNoise5V)(type KiCad)(uri ${KIPRJMOD}/Libraries/Footprints/LowNoise5V.pretty)(options "")(descr ""))
+)
