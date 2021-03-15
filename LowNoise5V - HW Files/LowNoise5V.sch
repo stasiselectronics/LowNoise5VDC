@@ -1,0 +1,220 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Converter_ACDC:HLK-PM01 PS?
+U 1 1 605057F1
+P 6400 3500
+AR Path="/604F9C77/605057F1" Ref="PS?"  Part="1" 
+AR Path="/605057F1" Ref="PS?"  Part="1" 
+F 0 "PS?" H 6400 3825 50  0000 C CNN
+F 1 "HLK-PM01" H 6400 3734 50  0000 C CNN
+F 2 "HotPlateController:Converter_ACDC_HiLink_HLK-PMxx" H 6400 3200 50  0001 C CNN
+F 3 "http://www.hlktech.net/product_detail.php?ProId=54" H 6800 3150 50  0001 C CNN
+F 4 "HI-LINK" H 6400 3500 50  0001 C CNN "MF 1"
+F 5 "HLK-PM01" H 6400 3500 50  0001 C CNN "MF 1 MPN"
+F 6 "C209903" H 6400 3500 50  0001 C CNN "MF 1 Ordering Code"
+	1    6400 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 605057F7
+P 6950 3700
+AR Path="/604F9C77/605057F7" Ref="#PWR?"  Part="1" 
+AR Path="/605057F7" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 3450 50  0001 C CNN
+F 1 "GND" H 6955 3527 50  0000 C CNN
+F 2 "" H 6950 3700 50  0001 C CNN
+F 3 "" H 6950 3700 50  0001 C CNN
+	1    6950 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 605057FD
+P 6950 3300
+AR Path="/604F9C77/605057FD" Ref="#PWR?"  Part="1" 
+AR Path="/605057FD" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6950 3150 50  0001 C CNN
+F 1 "+5V" H 6965 3473 50  0000 C CNN
+F 2 "" H 6950 3300 50  0001 C CNN
+F 3 "" H 6950 3300 50  0001 C CNN
+	1    6950 3300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 3400 6950 3300
+Wire Wire Line
+	6950 3600 6950 3700
+Text GLabel 2250 1600 0    50   Input ~ 0
+AC_Line_Out
+Text GLabel 2250 1800 0    50   Input ~ 0
+AC_Neutral
+Wire Wire Line
+	2250 1800 2400 1800
+Wire Wire Line
+	2250 1600 2400 1600
+Wire Wire Line
+	6800 3600 6950 3600
+Wire Wire Line
+	6800 3400 6950 3400
+Text Notes 5600 2950 0    98   ~ 0
+AC to DC Conversion
+$Comp
+L Connector:USB_A J?
+U 1 1 60505B03
+P 8150 2500
+F 0 "J?" H 7920 2489 50  0000 R CNN
+F 1 "USB_A" H 7920 2398 50  0000 R CNN
+F 2 "Connector_USB:USB_A_Molex_67643_Horizontal" H 8300 2450 50  0001 C CNN
+F 3 " ~" H 8300 2450 50  0001 C CNN
+F 4 "Molex" H 8150 2500 50  0001 C CNN "Part 1 MF"
+F 5 "676432911" H 8150 2500 50  0001 C CNN "Part 1 MPN"
+	1    8150 2500
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR?
+U 1 1 60506A13
+P 7650 2250
+AR Path="/604F9C77/60506A13" Ref="#PWR?"  Part="1" 
+AR Path="/60506A13" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7650 2100 50  0001 C CNN
+F 1 "+5V" H 7665 2423 50  0000 C CNN
+F 2 "" H 7650 2250 50  0001 C CNN
+F 3 "" H 7650 2250 50  0001 C CNN
+	1    7650 2250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7650 2250 7650 2300
+Wire Wire Line
+	7650 2300 7850 2300
+$Comp
+L power:GND #PWR?
+U 1 1 605077C1
+P 8150 3050
+AR Path="/604F9C77/605077C1" Ref="#PWR?"  Part="1" 
+AR Path="/605077C1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8150 2800 50  0001 C CNN
+F 1 "GND" H 8155 2877 50  0000 C CNN
+F 2 "" H 8150 3050 50  0001 C CNN
+F 3 "" H 8150 3050 50  0001 C CNN
+	1    8150 3050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8150 3050 8150 3000
+Wire Wire Line
+	8150 3000 8250 3000
+Wire Wire Line
+	8250 3000 8250 2900
+Wire Wire Line
+	8150 2900 8150 3000
+Connection ~ 8150 3000
+$Comp
+L Device:EMI_Filter_CommonMode FL?
+U 1 1 605085D5
+P 5150 3500
+F 0 "FL?" H 5150 3781 50  0000 C CNN
+F 1 "EMI_Filter_CommonMode" H 5150 3690 50  0000 C CNN
+F 2 "" H 5150 3540 50  0001 C CNN
+F 3 "~" H 5150 3540 50  0001 C CNN
+	1    5150 3500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5350 3400 6000 3400
+Wire Wire Line
+	6000 3600 5350 3600
+$Comp
+L Device:C C?
+U 1 1 6050D002
+P 4150 3500
+F 0 "C?" H 4265 3546 50  0000 L CNN
+F 1 "C" H 4265 3455 50  0000 L CNN
+F 2 "" H 4188 3350 50  0001 C CNN
+F 3 "~" H 4150 3500 50  0001 C CNN
+	1    4150 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Varistor RV?
+U 1 1 6050DA4F
+P 3000 3500
+F 0 "RV?" H 3103 3546 50  0000 L CNN
+F 1 "Varistor" H 3103 3455 50  0000 L CNN
+F 2 "" V 2930 3500 50  0001 C CNN
+F 3 "~" H 3000 3500 50  0001 C CNN
+	1    3000 3500
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:Fuse F?
+U 1 1 6050E1EC
+P 2500 3000
+F 0 "F?" V 2303 3000 50  0000 C CNN
+F 1 "Fuse" V 2394 3000 50  0000 C CNN
+F 2 "" V 2430 3000 50  0001 C CNN
+F 3 "~" H 2500 3000 50  0001 C CNN
+	1    2500 3000
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 60510491
+P 6950 4650
+F 0 "C?" H 7068 4696 50  0000 L CNN
+F 1 "470µF" H 7068 4605 50  0000 L CNN
+F 2 "" H 6988 4500 50  0001 C CNN
+F 3 "~" H 6950 4650 50  0001 C CNN
+	1    6950 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:CP C?
+U 1 1 605107D5
+P 7500 4650
+F 0 "C?" H 7618 4696 50  0000 L CNN
+F 1 "4.7 µF" H 7618 4605 50  0000 L CNN
+F 2 "" H 7538 4500 50  0001 C CNN
+F 3 "~" H 7500 4650 50  0001 C CNN
+	1    7500 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 605123CB
+P 8000 4650
+F 0 "C?" H 8115 4696 50  0000 L CNN
+F 1 "47nF" H 8115 4605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm" H 8038 4500 50  0001 C CNN
+F 3 "~" H 8000 4650 50  0001 C CNN
+	1    8000 4650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C?
+U 1 1 60513220
+P 8500 4650
+F 0 "C?" H 8615 4696 50  0000 L CNN
+F 1 "1nF" H 8615 4605 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D6.0mm_W2.5mm_P5.00mm" H 8538 4500 50  0001 C CNN
+F 3 "~" H 8500 4650 50  0001 C CNN
+	1    8500 4650
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC
