@@ -1,4 +1,4 @@
-19005474535061467
+19008706852998498
 .DesignArchive
 PTS636_SM25F_SMTR_LFS
 
@@ -56272,6 +56272,20 @@ USB_A Female Connector receptacle
 0
 6
 5
+LowNoise5V
+artwork_bottom
+
+
+0
+0
+0
+LowNoise5V
+artwork_top
+
+
+0
+0
+0
 Module
 A20_OLINUXINO_LIME2
 A20 Olinuxino LIME2, 1.2GHz, 512-1024MB RAM, Micro-SD, NAND or eMMC, 1000Mbit Ethernet
